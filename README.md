@@ -113,6 +113,11 @@ TaskFlow is a collaborative project management web application designed to strea
 
 ## Contributing
 We welcome contributions! Please fork this repository and create a pull request with your changes. Ensure your code adheres to the project's coding standards.
+```bash
+   git add .
+   git commit -m "<describe-your-changes>"
+   git checkout -b <your-branch-name> //this is for the ones who dont have their branch yet
+```
 
 ## License and Copyright
 © 2024 TaskFlow Development Team. All rights reserved.
