@@ -117,6 +117,7 @@ We welcome contributions! Please fork this repository and create a pull request 
    git add .
    git commit -m "<describe-your-changes>"
    git checkout -b <your-branch-name> //this is for the ones who dont have their branch yet
+   git push origin <your-branch-name>
 ```
 
 ## License and Copyright
