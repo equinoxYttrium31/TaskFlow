@@ -104,8 +104,8 @@ TaskFlow is a collaborative project management web application designed to strea
 
 **Clone the repository:**
    ```bash
-   git clone https://github.com/equinoxYttrium31/taskflow.git
-   cd taskflow
+   git clone https://github.com/equinoxYttrium31/TaskFlow.git
+   cd TaskFlow
    pip install -r requirements.txt
    python manage.py migrate
    Access the application at http://127.0.0.1:8000
