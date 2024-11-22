@@ -77,13 +77,13 @@ TaskFlow is a collaborative project management web application designed to strea
 ## Development Team
 
 - **Raymundo (Project Manager):** Oversees progress, Member Management, User Profiles.
-- **Member 2 (Frontend Specialist):** UI/UX design and alerts.
-- **Member 3 (Authentication Developer):** Handles registration and login/logout.
-- **Member 4 (Task & Project Management Specialist):** Develops project and task management features.
-- **Member 5 (Visualization Expert):** Creates Gantt charts and reporting.
-- **Member 6 (Notifications & File Sharing Developer):** Builds notifications and file-sharing features.
-- **Member 7 (Task Management Developer):** Implements task management for members.
-- **Member 8 (Kanban Specialist & Tester):** Designs the Kanban board and conducts testing.
+- **Santiago (Frontend Specialist):** UI/UX design and alerts.
+- **Flameño (Authentication Developer):** Handles registration and login/logout.
+- **Odiada (Task & Project Management Specialist):** Develops project and task management features.
+- **Samonte (Visualization Expert):** Creates Gantt charts and reporting.
+- **Flameño (Notifications & File Sharing Developer):** Builds notifications and file-sharing features.
+- **Mariano (Task Management Developer):** Implements task management for members.
+- **Santos (Kanban Specialist & Tester):** Designs the Kanban board and conducts testing.
 
 ---
 
