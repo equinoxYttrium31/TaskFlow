@@ -52,19 +52,19 @@ TaskFlow is a collaborative project management web application designed to strea
 ### Week 1: Setup and Core Feature Development
 - Django project setup and database schema design.
 - Development of core features:
-  - Authentication (Member 3)
-  - Layout and Navigation (Member 2)
-  - Member Management (Raymundo - Project Manager)
-  - Project and Task Management (Member 4)
+  - Authentication (Flameño)
+  - Layout and Navigation (Santiago)
+  - Member Management (Raymundo)
+  - Project and Task Management (Odiada)
 - Basic integration and testing.
 
 ### Week 2: Advanced Features and Integration
 - Implement advanced features:
-  - User Profiles (Raymundo - Project Manager)
-  - Notifications (Member 6)
-  - Task Management (Member 7)
-  - Gantt Chart Visualization (Member 5)
-  - Kanban Board (Member 8)
+  - User Profiles (Raymundo)
+  - Notifications (Flameño)
+  - Task Management (Mariano)
+  - Gantt Chart Visualization (Samonte)
+  - Kanban Board (Santos)
 - Debugging and integration.
 
 ### Week 3: Finalization and Deployment
