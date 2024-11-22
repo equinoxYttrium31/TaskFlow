@@ -7,3 +7,15 @@ Added File:
 Who Added:
 What Purpose of HTML:
 ```
+
+---
+Date: 2024-11-22
+Added File: MainPage.html
+Who Added: Jaem
+What Purpose of HTML: This is the main page of the website, it contains the navigation bar,
+
+---
+Date: 2024-11-22
+Added File: Login.html
+Who Added: Jaem
+What Purpose of HTML: This is the login page of the website, it contains the login form and
