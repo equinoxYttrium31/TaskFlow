@@ -23,7 +23,7 @@ class User(models.Model):
         # Get the number of users created in the current year
         user_count = User.objects.filter(UserID__startswith=str(year)).count() + 1
         # Format the UserID as yyyy-### (e.g., 2024-001, 2024-002, ...)
-        return f"{year}-{user_count:03}"
+        return f"{year}-{user_count:09}"
 
     def save(self, *args, **kwargs):
         # Generate UserID only if it's not already set
