@@ -7,3 +7,7 @@ def home_view(request):
         'message': 'Welcome to TaskFlow',
     }
     return render(request, template, context)
+
+def Login(request):
+    template = "Login.html"
+    return render(request, template)
