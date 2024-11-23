@@ -7,3 +7,8 @@ Added File:
 Who Added:
 
 ```
+
+---
+Date: November 23, 2024
+Added File: Login_style.css
+Who Added: Jaem
