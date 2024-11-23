@@ -20,5 +20,18 @@ showSigninLink.addEventListener("click", () => {
   showSignupLink.classList.remove("hidden");
 });
 
-// Set the default state (show Login initially)
+// Set the default state
 loginForm.classList.add("active");
+
+function validateForm() {
+  const password = document.getElementById("Password").value;
+  const confirmPassword = document.getElementById("ConfirmPassword").value;
+
+  // Check if passwords match
+  if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return false; // Prevent form submission
+  }
+
+  return true; // Allow form submission
+}

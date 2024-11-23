@@ -8,46 +8,101 @@
     <title>TaskFlow</title>
   </head>
   <body>
-    <div class="cntr_login">
-      <h1 class="title_login">Login</h1>
-      <h4 class="context_login">Welcome to TaskFlow</h4>
-      <form action="{% url 'home_view' %}">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" />
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" />
-        <input class="btn_login" type="submit" value="Sign In" />
-      </form>
-    </div>
+    <div class="cntr__login_signup">
+      <div class="cntr_login">
+        <h1 class="title login">Sign In</h1>
+        <h4 class="context login">
+          Welcome back to <span class="__task">Task</span
+          ><span class="__flow">Flow!</span>
+        </h4>
+        <form action="{% url 'login' %}" method="POST">
+          {% csrf_token %}
+          <label for="Username">Username</label>
+          <input
+            class="ls__form_inp"
+            type="text"
+            name="Username"
+            id="Username"
+            required
+          />
 
-    <div class="cntr_signup">
-      <h1 class="title_signup">Sign Up</h1>
-      <h4 class="context_login">Welcome to TaskFlow</h4>
-      <form action="">
-        <label for="name">Username</label>
-        <input type="text" name="name" id="name" />
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" />
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" />
-        <label for="user_role">Role</label>
-        <select name="user_role" id="user_role">
-          <option value=" ">Select Role</option>
-          <option value="team_member">Team Member</option>
-          <option value="project_leader">Project Leader</option>
-        </select>
-        <input type="submit" value="Sign Up" />
-      </form>
-    </div>
-    <div class="switch-container">
-      <p id="show-signup">
-        Don't have an account?
-        <span class="switch-link">Sign Up</span>
-      </p>
-      <p id="show-signin" class="hidden">
-        Already have an account?
-        <span class="switch-link">Sign In</span>
-      </p>
+          <label for="Password">Password</label>
+          <input
+            class="ls__form_inp"
+            type="password"
+            name="Password"
+            id="Password"
+            required
+          />
+
+          <input class="ls__form_inp btn" type="submit" value="Sign In" />
+          <input type="hidden" name="action" value="signin" />
+        </form>
+      </div>
+
+      <div class="cntr_signup">
+        <h1 class="title signup">Sign Up</h1>
+        <h4 class="context signup">
+          Join us in <span class="__task">Task</span
+          ><span class="__flow">Flow!</span>
+        </h4>
+        <form action="{% url 'save_user' %}" method="POST">
+          {% csrf_token %}
+          <label for="Username">Username</label>
+          <input
+            class="ls__form_inp"
+            type="text"
+            name="Username"
+            id="Username"
+            required
+          />
+
+          <label for="Email">Email</label>
+          <input
+            class="ls__form_inp"
+            type="email"
+            name="Email"
+            id="Email"
+            required
+          />
+
+          <label for="Password">Password</label>
+          <input
+            class="ls__form_inp"
+            type="password"
+            name="Password"
+            id="Password"
+            required
+          />
+
+          <label for="ConfirmPassword">Confirm Password</label>
+          <input
+            class="ls__form_inp"
+            type="password"
+            name="ConfirmPassword"
+            id="ConfirmPassword"
+            required
+          />
+
+          <label for="Role">Role</label>
+          <select class="ls__form_inp select" name="Role" id="Role" required>
+            <option value="team_member">Team Member</option>
+            <option value="project_leader">Project Leader</option>
+          </select>
+
+          <input class="ls__form_inp btn" type="submit" value="Sign Up" />
+          <input type="hidden" name="action" value="signup" />
+        </form>
+      </div>
+
+      <div class="switch-container">
+        <p id="show-signup">
+          Don't have an account? <span class="switch-link">Sign Up</span>
+        </p>
+        <p id="show-signin" class="hidden">
+          Already have an account? <span class="switch-link">Sign In</span>
+        </p>
+      </div>
     </div>
 
     <script src="{% static 'JS/Login_js.js' %}"></script>
