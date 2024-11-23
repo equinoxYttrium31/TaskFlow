@@ -1,12 +1,34 @@
+/* General Styles */
+.cntr__login_signup {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fefdfe;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
 .cntr_login,
 .cntr_signup {
   display: none; /* Both are hidden initially */
   text-align: center;
-  width: 300px;
+  width: 25rem;
   padding: 20px;
-  background: #fff;
+  background: linear-gradient(to right, #505258, #1c1e26);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+}
+
+.__task {
+  color: #1afdfe;
+}
+
+.__flow {
+  color: #fefdfe;
 }
 
 .cntr_login.active,
@@ -16,31 +38,50 @@
 
 label {
   display: block;
-  margin: 10px 0 5px;
+  text-align: start;
+  margin: 10px 15px 5px;
 }
 
-input,
-select {
-  width: 100%;
+.title {
+  margin: 0.5rem;
+}
+
+.context {
+  margin: 0.5rem;
+}
+
+.ls__form_inp {
+  width: 90%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
+  color: #1f2425;
   border-radius: 4px;
 }
 
-input[type="submit"] {
-  background-color: #4caf50;
+.ls__form_inp:focus {
+  outline: none;
+}
+
+.select {
+  width: 96%;
+}
+
+.btn {
+  background-color: #fc61a7;
   color: white;
   cursor: pointer;
   border: none;
+  transition: all 0.3s ease-in-out;
 }
 
-input[type="submit"]:hover {
-  background-color: #45a049;
+.btn:hover {
+  background-color: #fd93c3;
 }
 
 .switch-container {
   margin-top: 20px;
+  color: #1f2425;
   text-align: center;
 }
 
