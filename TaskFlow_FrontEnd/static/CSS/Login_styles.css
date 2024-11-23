@@ -1,3 +1,55 @@
-.title_login {
-  color: aqua;
+.cntr_login,
+.cntr_signup {
+  display: none; /* Both are hidden initially */
+  text-align: center;
+  width: 300px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.cntr_login.active,
+.cntr_signup.active {
+  display: block; /* Show only the active form */
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.switch-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.switch-link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
 }
