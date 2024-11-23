@@ -87,6 +87,12 @@ def save_user(request):
     # If it's not a POST request, just render the login page
     return render(request, 'Login.html')
 
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.contrib.auth.hashers import check_password
+from django.contrib.sessions.models import Session
+from .models import User  # Import your custom User model
+
 def login_view(request):
     if request.method == 'POST':
         # Get username and password from the form
@@ -98,17 +104,24 @@ def login_view(request):
             messages.error(request, "Both username and password are required!")
             return redirect('Login')  # Redirect back to the same page with error
 
-        # Authenticate user
-        user = authenticate(request, Username=username, Password=password)
+        try:
+            # Fetch the user from the database
+            user = User.objects.get(Username=username)
 
-        if user is not None:
-            # If the user is found and password is correct, log the user in
-            login(request, user)
-            messages.success(request, "Logged in successfully!")
-            return redirect('home_view')  # Redirect to the home page after successful login
-        else:
+            # Check if the password matches
+            if check_password(password, user.Password):
+                # Log the user in by creating a session
+                request.session['user_id'] = user.UserID
+                request.session['username'] = user.Username
+                messages.success(request, "Logged in successfully!")
+                return redirect('home_view')  # Redirect to the home page
+            else:
+                messages.error(request, "Invalid username or password.")
+                return redirect('Login')  # Redirect back to the login page
+        except User.DoesNotExist:
             messages.error(request, "Invalid username or password.")
             return redirect('Login')  # Redirect back to the login page
 
     # If it's not a POST request, just render the login page
     return render(request, 'Login.html')
+
