@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% load static %}
-    <link rel="stylesheet" href="{% static 'CSS/Login_styles.css' %}" />
-    <title>TaskFlow Login</title>
+    <link rel="stylesheet" href="{% static 'CSS/Login_styles.css' %}?=v1.0" />
+    <title>TaskFlow</title>
   </head>
   <body>
     <div class="cntr_login">
@@ -19,5 +19,37 @@
         <input class="btn_login" type="submit" value="Sign In" />
       </form>
     </div>
+
+    <div class="cntr_signup">
+      <h1 class="title_signup">Sign Up</h1>
+      <h4 class="context_login">Welcome to TaskFlow</h4>
+      <form action="">
+        <label for="name">Username</label>
+        <input type="text" name="name" id="name" />
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+        <label for="user_role">Role</label>
+        <select name="user_role" id="user_role">
+          <option value=" ">Select Role</option>
+          <option value="team_member">Team Member</option>
+          <option value="project_leader">Project Leader</option>
+        </select>
+        <input type="submit" value="Sign Up" />
+      </form>
+    </div>
+    <div class="switch-container">
+      <p id="show-signup">
+        Don't have an account?
+        <span class="switch-link">Sign Up</span>
+      </p>
+      <p id="show-signin" class="hidden">
+        Already have an account?
+        <span class="switch-link">Sign In</span>
+      </p>
+    </div>
+
+    <script src="{% static 'JS/Login_js.js' %}"></script>
   </body>
 </html>

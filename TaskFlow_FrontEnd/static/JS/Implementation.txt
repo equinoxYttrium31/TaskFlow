@@ -7,3 +7,9 @@ Added File:
 Who Added:
 What Functionality:
 ```
+
+---
+Date: November 23, 2024 
+Added File: Login_js.js
+Who Added: Jaem
+What Functionality: for signin/signup switching
