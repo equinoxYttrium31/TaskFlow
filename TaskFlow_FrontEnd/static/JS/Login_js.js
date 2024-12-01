@@ -20,9 +20,21 @@ showSigninLink.addEventListener("click", () => {
   showSignupLink.classList.remove("hidden");
 });
 
-// Set the default state
-loginForm.classList.add("active");
+// Set initial state
+const showSignup = "{{ show_signup|default:'false' }}" === "True";
+if (showSignup) {
+  signupForm.classList.add("active");
+  loginForm.classList.remove("active");
+  showSigninLink.classList.remove("hidden");
+  showSignupLink.classList.add("hidden");
+} else {
+  loginForm.classList.add("active");
+  signupForm.classList.remove("active");
+  showSignupLink.classList.remove("hidden");
+  showSigninLink.classList.add("hidden");
+}
 
+// Password Validation for Signup Form
 function validateForm() {
   const password = document.getElementById("Password").value;
   const confirmPassword = document.getElementById("ConfirmPassword").value;
